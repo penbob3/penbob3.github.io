@@ -20,6 +20,10 @@ main {
 
 tr,td {
     /*border: 1px solid white;*/
+    /*outline: 1px solid white;*/
+}
+
+.icon {
     outline: 1px solid white;
 }
 
@@ -40,7 +44,7 @@ td > a {
 #icontable {
     height: 400px;
     width: 500px;
-    margin-top: 15px;
+    margin-top: 16px;
     margin-left: 112px;
 }
 
