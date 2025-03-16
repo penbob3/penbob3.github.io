@@ -1,0 +1,57 @@
+tr,td {
+    /*border: 1px solid white;*/
+    /*outline: 1px solid white;*/
+}
+
+.icon {
+    outline: 1px solid white;
+}
+
+td {
+    width: 33.3%;
+    text-align: center;
+}
+
+tr {
+    height: 33.3%;
+}
+
+td > a {
+    text-decoration: none;
+    color: white;
+}
+
+#icontable {
+    height: 400px;
+    width: 500px;
+    margin-top: 16px;
+    margin-left: 112px;
+}
+
+#bannerbox {
+    border: 1px solid white;
+    height: 33px;
+    width: 704px;
+    margin-left: 9px;
+    position: absolute;
+    bottom: 9px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#bannerbox > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+#wmplayer {
+    height: 185px;
+    width: 457px;
+    border: none;
+    overflow: hidden;
+}

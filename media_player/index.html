@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Player</title>
+        <link rel="stylesheet" href="/media_player/media_player.css">
+    </head>
+    <script>
+        function shutterload() {
+            setTimeout(() => {
+                document.getElementById("shutter").style.display = 'none'
+                document.getElementById("playercontainer").style.pointerEvents = 'auto'
+            }, 3100)
+        }
+    </script>
+    <body>
+        <div id="playercontainer" style="pointer-events:none;" onload="shutterstart()">
+            
+            <audio id="music" src="https://ia902309.us.archive.org/21/items/kalimba_20211013/Kalimba.mp3"></audio>
+            <input id="volslider" type="range" min="1" max="100" value="20" class="slider">
+            <input id="seekslider" type="range" min="1" max="100" value="20" class="slider">
+            <img id="playpausebtn" src="media_player/images/playbutton2.png" onclick="playpause()">
+            <img id="shutter" src="media_player/images/Shutterfast.gif" onload="shutterload()">
+            <span id="playingstatus" class="playingtext" style="display: none;">Playing: 192 K bits/second</span>
+            <span id="songtitle" class="playingtext" style="display: none;">Mr. Scruff - Kalimba</span>
+        </div>
+    </body>
+    <script>
+        document.getElementById('shutter').src = "media_player/images/Shutterfast.gif?a=" + Math.random()
+
+        let volume = document.getElementById("volslider")
+        let music = document.getElementById("music")
+        music.volume = 0.2
+        volume.addEventListener("change", function(e) {
+            music.volume = e.currentTarget.value / 100
+        })
+
+        let playing = false
+        function playpause() {
+            document.getElementById("songtitle").style.display = 'block'
+            document.getElementById("playingstatus").style.display = 'block'
+            let playingstatus = document.getElementById("playingstatus")
+            let music = document.getElementById("music")
+            let playpausebtn = document.getElementById("playpausebtn")
+            if (playing) {
+                music.pause()
+                playing = false
+                playpausebtn.src = "media_player/images/playbutton2.png"
+                playingstatus.innerText = "Paused"
+            } else {
+                music.play()
+                playing = true
+                playpausebtn.src = "media_player/images/pausebutton2.png"
+                playingstatus.innerText = "Playing: 192 K bits/second"
+            }
+        }
+    </script>
+</html>

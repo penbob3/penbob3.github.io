@@ -1,0 +1,84 @@
+body {
+    background-color: black;
+}
+
+#playercontainer {
+    height: 175px;
+    width: 447px;
+    /*outline: 1px solid white;*/
+    background-image: url(images/BaseCropped.png);
+}
+
+#shutter {
+    margin-top: 54px;
+    margin-left: 108px;
+}
+
+#volslider {
+    margin-top: 115px;
+    margin-left: 153px;
+    width: 90px;
+    background: none;
+}
+
+#seekslider {
+    margin-top: 115px;
+    margin-left: 281px;
+    width: 90px;
+    background: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 9px;
+    border: 0;
+    border-radius: 0%;
+    cursor: pointer;
+    background: url(images/Knob.gif);
+}
+
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 9px;
+    border: 0;
+    border-radius: 0%;
+    cursor: pointer;
+    background: url(images/Knob.gif);
+  }
+
+div > img,input,span {
+    position: absolute
+}
+
+#playpausebtn {
+    margin-top: 42px;
+    margin-left: 21px;
+}
+
+#playpausebtn:hover {
+    filter: brightness(1.3)
+}
+
+.playingtext {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    margin-left: 136px;
+    user-select: none;
+}
+
+#songtitle {
+    margin-top: 89px;
+}
+
+#playingstatus {
+    margin-top: 66px;
+}
+
+#blocker {
+    height: 175px;
+    width: 447px;
+}
