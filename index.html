@@ -5,27 +5,8 @@
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" href="homepage.css">
     </head>
-    <script>
-        let playing = false
-        function play() {
-            let music = document.getElementById("music")
-            let boombox = document.getElementById("boombox")
-            music.volume = 0.3
-            if (playing) {
-                music.pause()
-                playing = false
-                boombox.src = "assets/icons/boombox_off.png"
-            } else {
-                music.play()
-                playing = true
-                boombox.src = "assets/icons/boombox_on.png"
-            }
-        }
-      </script>
     <body>
-        <audio id="music" src="https://ia902309.us.archive.org/21/items/kalimba_20211013/Kalimba.mp3" autoplay></audio>
         <main>
-            <img src="assets/icons/boombox_off.png" height="40px" style="margin-top: 0px; margin-left: -205px; position: absolute" id="boombox" onclick="play()">
             <img src="assets/paw-rainbow.gif" style="margin-top: 25px; margin-left: -90px; position: absolute">
             <img src="assets/header.png" height="70px" style="margin-top: 25px; position: relative">
             <img src="assets/earth.gif" height="82px" style="margin-top: 16px; margin-left: 18px; position: absolute">
