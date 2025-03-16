@@ -37,6 +37,7 @@ body {
     border-radius: 0%;
     cursor: pointer;
     background: url(images/Knob.gif);
+    margin-top: 4px;
 }
 
 .slider::-moz-range-thumb {
@@ -46,6 +47,12 @@ body {
     border-radius: 0%;
     cursor: pointer;
     background: url(images/Knob.gif);
+}
+
+input[type=range] {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
   }
 
 div > img,input,span {
