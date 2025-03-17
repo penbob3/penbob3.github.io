@@ -1,0 +1,14 @@
+#gallery {
+    border: 4px ridge #4464c4;
+    height: 408px;
+    /*width: 716px;*/
+    width: 656px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-image: url(assets/wall.jpg);
+    background-size: cover;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
