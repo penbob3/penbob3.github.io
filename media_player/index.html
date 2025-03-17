@@ -35,11 +35,11 @@
         })
 
         let seekslider = document.getElementById("seekslider")
-        let durationS = Math.ceil(music.duration)
-        seekslider.max = durationS //This doesn't work for some reason? Setting max to 348 manually
+        //let durationS = Math.ceil(music.duration)
+        //seekslider.max = durationS //This doesn't work for some reason? Setting max to 348 manually
 
         music.addEventListener("timeupdate", (e) => {
-            document.getElementById("seekslider")
+            //document.getElementById("seekslider")
             seekslider.value = e.currentTarget.currentTime
         })
 
