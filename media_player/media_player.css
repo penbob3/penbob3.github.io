@@ -26,6 +26,8 @@ body {
     margin-left: 281px;
     width: 90px;
     background: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .slider::-webkit-slider-thumb {
