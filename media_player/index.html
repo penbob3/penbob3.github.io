@@ -17,7 +17,7 @@
             
             <audio id="music" loop preload="auto" src="https://ia902309.us.archive.org/21/items/kalimba_20211013/Kalimba.mp3"></audio>
             <input id="volslider" type="range" min="1" max="100" value="20" class="slider">
-            <input id="seekslider" type="range" min="1" max="100" value="1" class="slider">
+            <input id="seekslider" type="range" min="1" max="348" value="1" class="slider">
             <img id="playpausebtn" src="images/playbutton2.png" onclick="playpause()">
             <img id="shutter" src="images/Shutterfast.gif" onload="shutterload()">
             <span id="playingstatus" class="playingtext" style="display: none;">Playing: 192 K bits/second</span>
@@ -36,7 +36,7 @@
 
         let seekslider = document.getElementById("seekslider")
         let durationS = Math.ceil(music.duration)
-        seekslider.max = durationS
+        seekslider.max = durationS //This doesn't work for some reason? Setting max to 348 manually
 
         music.addEventListener("timeupdate", (e) => {
             document.getElementById("seekslider")
