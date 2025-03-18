@@ -1,0 +1,12 @@
+#infobox {
+    border: 1px solid white;
+    height: 165px;
+    width: 448px;
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 310px;
+    margin-left: 251px;
+    text-align: center;
+    color: white;
+}
