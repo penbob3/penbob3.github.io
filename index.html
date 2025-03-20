@@ -6,10 +6,21 @@
     </head>
     <body id="mainbody">
         <main>
-            <iframe id="container" scrolling="no" frameBorder="0" src="/homepage" title="container"></iframe>
+            <img src="assets/back.png" id="backbutton" height="38px" onclick="history.back()">
+            <iframe id="container" scrolling="no" frameBorder="0" src="/homepage" title="container" onLoad="checkBackBtn()"></iframe>
         </main>
         <img id="paws" src="assets/paws.gif">
         <span id="copyright" class="text">Copyright© Max 2025</span>
         <iframe id="wmplayer" scrolling="no" frameBorder="0" src="/media_player" title="player"></iframe> 
     </body>
+    <script>
+        function checkBackBtn() {
+            let path = document.getElementById("container").contentWindow.location.pathname
+            if (path == "/homepage/") {
+                document.getElementById("backbutton").style.display = "none"
+            } else {
+                document.getElementById("backbutton").style.display = "block"
+            }
+        }
+    </script>
 </html>
