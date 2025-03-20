@@ -1,4 +1,4 @@
-body {
+#mainbody {
     background-image: url('assets/bg.webp');
     background-repeat: repeat;
     display: grid;
@@ -12,9 +12,8 @@ body {
 main {
     height: 600px;
     width: 724px;
+    margin-top: 10px;
     border: 9px ridge #E6EB00;
-    text-align: center;
-    position: relative
 }
 
 #paws {
@@ -29,4 +28,16 @@ main {
 
 .text {
     color: white;
+}
+
+#container {
+    height: 600px;
+    width: 724px;
+}
+
+#wmplayer {
+    height: 185px;
+    width: 457px;
+    border: none;
+    overflow: hidden;
 }
