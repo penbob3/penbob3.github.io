@@ -1,3 +1,10 @@
+body {
+    text-align: center;
+    height: 600px;
+    width: 724px;
+    margin: 0;
+}
+
 #gallery {
     border: 4px ridge #4464c4;
     height: 408px;
