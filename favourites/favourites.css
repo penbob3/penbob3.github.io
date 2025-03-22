@@ -86,3 +86,71 @@ body {
 .games_sel:hover {
     background-image: url(assets/taskbar_icons/games_selected_hover.png);
 }
+
+#windows {
+    width: 722px;
+    height: 750px;
+    margin-top: -89px;
+}
+
+.window {
+    width: 600px;
+    aspect-ratio: 8/6;
+    position: absolute;
+    border-top-right-radius: 8px;
+}
+
+.wincontent {
+    position: absolute;
+    background: white;
+    height: 409px;
+    width: 596px;
+    margin-top: 39px;
+    margin-left: 2px;
+}
+
+.border {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+}
+
+.musicwin {
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.musicwin_sel {
+
+}
+
+.websiteswin {
+    background-image: url(assets/windows/websites.png);
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.websiteswin_sel {
+
+}
+
+.moviestvwin {
+    background-image: url(assets/windows/moviestv.png);
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.moviestvwin_sel {
+
+}
+
+.gameswin {
+    background-image: url(assets/windows/games.png);
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.gameswin_sel {
+
+}

@@ -7,11 +7,10 @@
     </head>
     <body>
         
-        <img src="/homepage/assets/paw-rainbow.gif" style="margin-top: 25px; margin-left: -90px; position: absolute">
-        <img src="/favourites/assets/favourites_header.png" height="70px" style="margin-top: 25px; position: relative">
-        <img src="/homepage/assets/earth.gif" height="82px" style="margin-top: 16px; margin-left: 18px; position: absolute">
+        <img src="/homepage/assets/paw-rainbow.gif" style="margin-top: 25px; margin-left: -90px; position: absolute; z-index: -1">
+        <img src="/favourites/assets/favourites_header.png" height="70px" style="margin-top: 25px; position: relative; z-index: -1">
+        <img src="/homepage/assets/earth.gif" height="82px" style="margin-top: 16px; margin-left: 18px; position: absolute; z-index: -1">
         <br>
-        <span class="text">Welcome to my website!</span>
         <div id="taskbar">
             <div style="height: 28px; width: 100px;"></div>
             <div class="program music_sel" id="music" onclick="select('music')"></div>
@@ -19,18 +18,50 @@
             <div class="program moviestv" id="moviestv" onclick="select('moviestv')"></div>
             <div class="program games" id="games" onclick="select('games')"></div>
         </div>
+        <div id="windows">
+            <div id="gameswin" class="window gameswin">
+                <div class="wincontent">
+
+                </div>
+                <div class="border" style="background-image: url(assets/windows/games.png)"></div>
+            </div>
+            <div id="moviestvwin" class="window moviestvwin">
+                <div class="wincontent">
+
+                </div>
+                <div class="border" style="background-image: url(assets/windows/moviestv.png)"></div>
+            </div>
+            <div id="websiteswin" class="window websiteswin">
+                <div class="wincontent">
+
+                </div>
+                <div class="border" style="background-image: url(assets/windows/websites.png)"></div>
+            </div>
+            <div id="musicwin" class="window musicwin">
+                <div class="wincontent">
+
+                </div>
+                <div class="border" style="background-image: url(assets/windows/music.png)"></div>
+            </div>
+        </div>
     </body>
     <script>
+        let zorder = [ "music", "websites", "moviestv", "games" ]
+        function enforceZorder() {
+            zorder.slice().reverse().forEach((name, idx) => {
+                document.getElementById(name + "win").style.zIndex = idx * 1000
+            })
+        }
+        enforceZorder()
+
+        let selected = "music"
+        let programs = {
+            music: document.getElementById("music"),
+            websites: document.getElementById("websites"),
+            moviestv: document.getElementById("moviestv"),
+            games: document.getElementById("games")
+        }
         function select(objname) {
-            let programs = {
-                music: document.getElementById("music"),
-                websites: document.getElementById("websites"),
-                moviestv: document.getElementById("moviestv"),
-                games: document.getElementById("games")
-            }
-
-            let selected = "music"
-
             Object.entries(programs).forEach((obj) => {
                 if (obj[0] == objname) {
                     //obj[1].style.backgroundImage = `url(assets/taskbar_icons/${obj[0]}_selected.png)`
@@ -43,6 +74,11 @@
                     obj[1].classList.add(obj[0])
                 }
             })
+
+            let idx = zorder.indexOf(objname)
+            zorder.splice(idx, 1)
+            zorder.unshift(objname)
+            enforceZorder()
         }
     </script>
 </html>
