@@ -116,6 +116,16 @@ body {
     background-size: 100%;
 }
 
+.unselected {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+    opacity: 0.37;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .musicwin {
     margin-top: 80px;
     margin-left: 80px;

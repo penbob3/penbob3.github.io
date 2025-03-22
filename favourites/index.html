@@ -24,24 +24,28 @@
 
                 </div>
                 <div class="border" style="background-image: url(assets/windows/games.png)"></div>
+                <div class="unselected"></div>
             </div>
             <div id="moviestvwin" class="window moviestvwin">
                 <div class="wincontent">
 
                 </div>
                 <div class="border" style="background-image: url(assets/windows/moviestv.png)"></div>
+                <div class="unselected"></div>
             </div>
             <div id="websiteswin" class="window websiteswin">
                 <div class="wincontent">
 
                 </div>
                 <div class="border" style="background-image: url(assets/windows/websites.png)"></div>
+                <div class="unselected"></div>
             </div>
             <div id="musicwin" class="window musicwin">
                 <div class="wincontent">
 
                 </div>
                 <div class="border" style="background-image: url(assets/windows/music.png)"></div>
+                <div class="unselected"></div>
             </div>
         </div>
     </body>
@@ -49,7 +53,13 @@
         let zorder = [ "music", "websites", "moviestv", "games" ]
         function enforceZorder() {
             zorder.slice().reverse().forEach((name, idx) => {
-                document.getElementById(name + "win").style.zIndex = idx * 1000
+                var win = document.getElementById(name + "win")
+                win.style.zIndex = idx * 1000
+                if (idx == 3) {
+                    win.lastElementChild.classList.remove("unselected")
+                } else {
+                    win.lastElementChild.classList.add("unselected")
+                }
             })
         }
         enforceZorder()
