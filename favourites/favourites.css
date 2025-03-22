@@ -4,3 +4,85 @@ body {
     width: 724px;
     margin: 0;
 }
+
+#taskbar {
+    height: 28px;
+    width: 724px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(assets/none_bar.png);
+    background-size: auto 28px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.program {
+    height: 28px;
+    width: 149px;
+    background-size: auto 28px;
+}
+
+.music {
+    background-image: url(assets/taskbar_icons/music.png);
+}
+
+.music:hover {
+    background-image: url(assets/taskbar_icons/music_hover.png);
+}
+
+.music_sel {
+    background-image: url(assets/taskbar_icons/music_selected.png);
+}
+
+.music_sel:hover {
+    background-image: url(assets/taskbar_icons/music_selected_hover.png);
+}
+
+.websites {
+    background-image: url(assets/taskbar_icons/websites.png);
+}
+
+.websites:hover {
+    background-image: url(assets/taskbar_icons/websites_hover.png);
+}
+
+.websites_sel {
+    background-image: url(assets/taskbar_icons/websites_selected.png);
+}
+
+.websites_sel:hover {
+    background-image: url(assets/taskbar_icons/websites_selected_hover.png);
+}
+
+.moviestv {
+    background-image: url(assets/taskbar_icons/moviestv.png);
+}
+
+.moviestv:hover {
+    background-image: url(assets/taskbar_icons/moviestv_hover.png);
+}
+
+.moviestv_sel {
+    background-image: url(assets/taskbar_icons/moviestv_selected.png);
+}
+
+.moviestv_sel:hover {
+    background-image: url(assets/taskbar_icons/moviestv_selected_hover.png);
+}
+
+.games {
+    background-image: url(assets/taskbar_icons/games.png);
+}
+
+.games:hover {
+    background-image: url(assets/taskbar_icons/games_hover.png);
+}
+
+.games_sel {
+    background-image: url(assets/taskbar_icons/games_selected.png);
+}
+
+.games_sel:hover {
+    background-image: url(assets/taskbar_icons/games_selected_hover.png);
+}
