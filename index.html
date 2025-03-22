@@ -6,7 +6,7 @@
     </head>
     <body id="mainbody">
         <main>
-            <img src="assets/back.png" id="backbutton" height="38px" onclick="history.back()">
+            <img src="assets/back.png" id="backbutton" height="38px" onclick="document.getElementById('container').src = '/homepage'">
             <iframe id="container" scrolling="no" frameBorder="0" src="/homepage" title="container" onLoad="checkBackBtn()"></iframe>
         </main>
         <img id="paws" src="assets/paws.gif">
