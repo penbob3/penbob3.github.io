@@ -131,18 +131,10 @@ body {
     margin-left: 80px;
 }
 
-.musicwin_sel {
-
-}
-
 .websiteswin {
     background-image: url(assets/windows/websites.png);
     margin-top: 70px;
     margin-left: 70px;
-}
-
-.websiteswin_sel {
-
 }
 
 .moviestvwin {
@@ -151,16 +143,8 @@ body {
     margin-left: 60px;
 }
 
-.moviestvwin_sel {
-
-}
-
 .gameswin {
     background-image: url(assets/windows/games.png);
     margin-top: 50px;
     margin-left: 50px;
-}
-
-.gameswin_sel {
-
 }
